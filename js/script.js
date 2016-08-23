@@ -9,8 +9,10 @@ $(function(){
 
     $("#image_modal_btn").click(function(){
         $('input[type=file]').iPreview({
-            target : "header";
+            target : "#header"
         });
+        //header のbackground-imageが変わる
+        //今の状態では画像が挿入されるだけ
 
     });
 
