@@ -1,0 +1,117 @@
+body{
+	background:#ccc;
+}
+header{
+	background: pink;
+	height: 300px;
+	width: 100%;
+}
+.container{
+	background:white;
+}
+
+.dropdown2{
+	width: 82px;
+    margin-top: -20px;
+    margin-left: 95px;
+}
+
+
+.nav{
+    height: 43px;
+    margin-top: 10px;
+	width: 100%;
+}
+
+.nav{
+	background-color: #CCC;
+	li{
+		text-align: center;
+		width:85px;
+		.active{
+			background-color: #CCC;
+			color: red;
+		}
+	}
+}
+.tsuika{
+    width: 80px;
+    padding: 10px;
+    border: dashed 1px;
+    text-align: center;
+}
+
+
+
+.contents{
+
+}
+
+.day{
+	display:none;
+	background-color;
+}
+
+.schedule{
+	margin-left: 132px;
+    padding: 15px;
+    border-left: 1px solid #765946;
+    border-top: 1px dashed #765946;
+    position: relative;
+    width: 80%;
+
+	a{
+		width: 234px;
+	    height: 58px;
+	    margin: 0 auto;
+	    display: block;
+	    line-height: 58px;
+	    font-size: 1.13em;
+	    text-align: center;
+		text-decoration:none;
+	    color: #aaa;
+	}
+}
+
+//モーダル
+#modal{
+	display:none;
+	width:50%;
+	margin:1.5em auto 0;
+	padding:10px 20px;
+	border:2px solid #aaa;
+	background:#fff;
+	z-index:2;
+
+	button{
+		width: 70px;
+	}
+}
+
+.close{
+	width:20px;
+}
+
+#modalSave{
+	width:80px;
+}
+
+
+
+
+
+h4{
+	position: absolute;
+    right: 100%;
+    margin: 0 46px 0 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+button{
+	margin-left: 60%;
+    width: 400px;
+}
+

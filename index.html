@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/ja.js"></script>
+
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- js -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript"  src="js/combodate.js"></script> 
+	<script type="text/javascript"  src="js/jquery.iPreview.min.js"></script>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="sass/style.scss">
+		
+
+	<head>
+		<title>旅のしおり</title>
+	</head>
+	<body>
+		<header>
+			<div class="wrap">
+				<h2 class="title">
+					<input id="title_input" class="title_input" placeholder="旅のタイトル" maxlength="30">
+				</h2>
+				<a id="image_modal_btn" href="javascript:void(0);" class="change"><span>背景画像を変更する<input type="file" name="userfile" accept="image/*"></span></a>
+				<!-- <p class="gaiyo summary_block" id="summary_block">
+					<span id="summary_view" class="summary_view"></span>
+					<textarea id="summary_input" class="summary_input" placeholder="旅のこだわり（100文字まで）　例）夏休み女子3人旅　絶景ビーチ＆おいしい沖縄のカフェめぐり">
+					</textarea>
+				</p> -->
+			</div>
+			
+			<p>旅の始まり
+				<span>・・・・・</span>
+				<div class="dropdown">
+					<span id="trip_start_ym" class="dropdown-toggle" data-toggle="dropdown">
+						<span id="ym">2016年8月</span>
+						<span class="caret"></span>
+					</span>
+					<ul class="dropdown-menu">
+						<li><a href="#" data-toggle="tab" id="first"></a></li>
+						<li><a href="#" data-toggle="tab" id="second"></a></li>
+						<li><a href="#" data-toggle="tab" id="third"></a></li>
+						<li><a href="#" data-toggle="tab" id="fourth"></a></li>
+						<li><a href="#" data-toggle="tab" id="fifth"></a></li>
+					</ul>
+				</div>
+				
+				<div class="dropdown dropdown2">
+					<span id="trip_start_d" class="dropdown-toggle" data-toggle="dropdown">
+						<span id="dd">1日(月)</span>
+						<span class="caret"></span>
+					</span>
+					<ul class="dropdown-menu menu2" style="list-style:none">
+					</ul>
+				</div>
+			</p>
+		</header>
+
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li>
+					<a href="#day1" data-toggle="tab" class="tab1">8/1 月</a>
+				</li>
+
+				<li class="tsuika">
+					<b>+</b>
+				</li>
+			</ul>
+			
+			
+			<!-- タブの中身 -->
+			<div class="contents">
+				<div class="inner">
+
+					<!-- MODAL -->
+					<div class="modal">
+						<div id="modal" >
+							<div class="modal-dialog">
+								<div class="modal-content">
+
+									<div class="modal-header">
+						                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						            </div>
+
+									<div class="modal-body">
+										
+										<form>
+											<div class="form-group">
+											<!-- 何時から何時まで -->
+												<input type="text" id="time" data-format="HH:mm" data-template="HH : mm" name="datetime" value="07:00">
+												から
+												<input type="text" id="time2" data-format="HH:mm" data-template="HH : mm" name="datetime" value="08:00">
+												まで
+											</div>
+
+											<div class="form-group">
+						                        <input type="text" class="form-control" id="exampleInput1" placeholder="(例)お土産を買いに国際通りへ" maxlength="80">
+						                    </div>
+										</form>
+									</div>
+
+									<div class="modal-footer">
+						                <button type="button" class="btn btn-primary" id="modalSave" data-dismiss="modal">決定</button>
+						            </div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+						
+
+					<div id="day1" class="day">
+						<div class="start">
+						<a href="#" class="btnTsuika">予定を追加する</a>
+
+							<h3>
+								１日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<div class="at7">
+								<h4>
+									<span>07:00</span>
+									から
+									<span>08:00</span>
+								</h4>
+								<a href="#" class="btnHenshu">予定を編集する</a>
+								<div class="modal-result"></div>
+							</div>
+						</div>
+					</div>
+
+					<div id="day2" class="day">
+						<div class="start">
+							<h3>
+								2日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<h4>
+								<span>07:00</span>
+							</h4>
+						</div>
+
+					</div>
+
+					<div id="day3" class="day">
+						<div class="start">
+							<h3>
+								3日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<h4>
+								<span>07:00</span>
+							</h4>
+						</div>
+					</div>
+
+					<div id="day4" class="day">
+						<div class="start">
+							<h3>
+								4日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<h4>
+								<span>07:00</span>
+								
+							</h4>
+						</div>
+					</div>
+
+					
+					<div id="day5" class="day">
+						<div class="start">
+							<h3>
+								5日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<h4>
+								<span>07:00</span>
+							</h4>
+						</div>
+					</div>
+
+					<div id="day6" class="day">
+						<div class="start">
+							<h3>
+								6日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<h4>
+								<span>07:00</span>
+							</h4>
+						</div>
+					</div>
+
+
+					<div id="day7" class="day">
+						<div class="start">
+							<h3>
+								7日目
+							</h3>
+						</div>
+
+						<div class="schedule">
+							<h4>
+								<span>07:00</span>
+							</h4>
+						</div>
+					</div>
+
+					
+					<a href="">
+						<button type="button" class="btn">この内容で作成する</button>
+					</a>
+
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
